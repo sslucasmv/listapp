@@ -120,6 +120,9 @@ function showTotalTask(){
         if(listTask.length > 0){
         div.innerHTML = `<div class="title_total"><h3>Tareas realizadas: ${tareasRealizadas} / ${totalTareas} ${saveCurrentDate()} </h3></div>`
         totalTask.appendChild(div)
+        if(tareasRealizadas > 2 && tareasRealizadas < 10){
+            div.innerHTML += `<h3 class="title_total">Hoy si estas inspirado!</h3>`
+        }
     }   else if(listTask.length === 0){
         div.innerHTML = `<div class="title_total"> <h3>No hay tareas en tu lista de tareas </h3></div>`
         totalTask.appendChild(div)
