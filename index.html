@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Document</title>
+    <style>
+        .activo {
+            background-color: rgb(200, 234, 235) !important;
+        }
+
+        li.activo button {
+            background-color: #54a070;
+            color: #fefefe !important;
+        }
+
+        .title-item::first-letter {
+            text-transform: uppercase;
+        }
+
+        li.itemTask {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            padding: 5px;
+            border-radius: 10px;
+            width: 280px;
+            padding: 10px;
+            margin-left: 4px;
+            background-color: #eee;
+        }
+
+         li.itemTask span {
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+         }
+
+         .title_total {
+            font-size: 13px;
+            padding: 10px;
+            width: 300px;
+            font-weight: bold;
+         }
+
+         h3 {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="field" style="width: 300px; padding: 5px;">
+        <form id="formAddItem">
+            <button type="submit" value="Agregar" class="button is-primary">Agregar</button>
+            <button type="submit" value="Guardar" class="button is-info">Guardar</button>
+            <button type="submit" value="Borrar" class="button is-danger">Borrar</button>
+            <input type="text" id="taskName" class="input mt-4">
+        </form>
+        </div>
+    </header>
+   <ul id="contenedor">
+    <!-- aqui va el contenido -->
+   </ul>
+   <div id="totalTask"></div>
+    
+
+<!-- llamada de js siempre antes de cierre de body o con defer en el head-->    
+<script src="lista.js"></script>
+<script src="https://kit.fontawesome.com/6421b44a28.js" crossorigin="anonymous"></script> 
+</body>
+</html>
